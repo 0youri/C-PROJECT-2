@@ -60,12 +60,15 @@ private:
     /** @brief Définition d'un tableau de chaines de caractères qui est liste de following  */
     vector<string> following;
     
-    /** @brief Retourne une chaine de caractères contenant le mot de passe */
-    string getPassword() const;
+    
 
 public:
+    /**
+     * @brief Constructeur par défaut
+    */
+    Profil();
     /** 
-	@brief Constructeur par défaut et avec des valeurs données
+	@brief Constructeur avec des valeurs données
     @param nusername : définition d'une chaine de caractères qui est username d'un nouveau utilisateur
     @param nmail : définition d'une chaine de caractères qui est adresse mail d'un nouveau utilisateur
     @param npassword : définition d'une chaine de caractères qui est mot de passe d'un nouveau utilisateur
@@ -89,11 +92,15 @@ public:
     
     /** @brief Destructeur */
     ~Profil();
+    /** @brief Fonction vide tout */
+    void vider();
     
     /** @brief Retourne une chaine de caractères contenant username */
     string getUsername() const;
     /** @brief Retourne une chaine de caractères contenant l'adresse mail */
     string getMail() const;
+    /** @brief Retourne une chaine de caractères contenant le mot de passe */
+    string getPassword() const;
     /** @brief retourne le Nom de l'utilisateur    */
     string getNom() const; 
     /** @brief retourne le Prenom de l'utilisateur    */
@@ -221,6 +228,17 @@ public:
     void ajouterFollowing(const string ausername);
     
     /**
+     * @brief Fonction vérifie si username existe dans la liste Followers
+     * @param susername : username à vérifier
+    */
+    bool existeFollowers(const string susername);
+    /**
+     * @brief Fonction vérifie si username existe dans la liste Following
+     * @param susername : username à vérifier
+    */
+    bool existeFollowing(const string susername);
+
+    /**
     @brief Création d'un nouveau avis dans le tableau des liens sur Avis
     @param username : définition d'une chaine de caractères qui est username de la personne qui a laissé avis
     @param like : définition d'un booléen, si true = liké si false = pas liké
@@ -253,6 +271,12 @@ public:
     @brief Test de regression teste toutes les fonctions de la classe
     */
     void testRegression();
+
+    /**
+    @brief Operateur= permet de remplacer les données actuelles par les données d'un autre EnsembleProfils
+    @param recopie : EnsembleProfils
+    */
+    void operator=(const Profil & recopie);
 
 };
 

@@ -5,13 +5,29 @@
 
 using namespace std;
 
+/**
+    @brief La classe EnsembleProfils est composée d'une liste de profils. Elle sert à gérer l'ensemble des profils de
+    l'application (inscription, suppression de compte) ainsi que les interactions entre ceux-ci (matching, abonnements, avis). 
+*/
+
 class EnsembleProfils
 {
     private :
         vector<Profil> profils;
 
+        /**
+        @brief Retourne la liste de vector<Profil> 
+        */
+        vector<Profil> getEnsembleProfils() const;
     public :
-
+        /**
+        @brief Constructeur par défaut
+        */
+        EnsembleProfils();
+        /**
+        @brief Constructeur par recopie 
+        */
+        EnsembleProfils(const EnsembleProfils & recopie);
         /**
         @brief Destructeur 
         */
@@ -24,6 +40,17 @@ class EnsembleProfils
         void addProfil(const Profil &p);
 
         /**
+         * @brief Fonction donne la taille de la liste profils
+        */
+        int getSize();
+
+        /**
+        @brief Fonction retourne Profil avec username demandé
+        @param username : username du Profil à retourner
+        */
+        Profil & getProfil(const string susername);
+
+        /**
         @brief Fonction permettant de supprimer un profil de la liste des profils
         @param username : Nom du profil à supprimer
         */ 
@@ -34,6 +61,12 @@ class EnsembleProfils
         @param username : username a comparer avec ceux déjà existants dans la liste de profils
         */
         bool existeUsername(const string username);
+
+        /**
+         * @brief Fonction vérifie si le mot de passe appartient à tel profil via username 
+        */
+        bool verifPassword(const string username, const string password);
+
 
         /**
         @brief Fonction permettant de savoir si une adresse mail est déjà utilisée
@@ -103,7 +136,7 @@ class EnsembleProfils
         @param tabmatchs : 1er tableau
         @param tab : 2ème tableau
         */
-        void triEnleve(vector<string> tabmatchs, const vector<string> tab);
+        vector<string> triEnleve(vector<string> tabmatchs, const vector<string> tab);
 
         /**
         @brief Operateur[] pour pouvoir faire par exemple profils[0].getUsername()
@@ -112,9 +145,16 @@ class EnsembleProfils
         Profil & operator[](int i);
 
         /**
+        @brief Operateur= permet de remplacer les données actuelles par les données d'un autre EnsembleProfils 
+        @param recopie : EnsembleProfils
+        */
+        void operator=(const EnsembleProfils & recopie);
+
+        /**
         @brief Test de regression teste toutes les fonctions de la classe
         */
         void testRegression();
+
 };
 
 #endif

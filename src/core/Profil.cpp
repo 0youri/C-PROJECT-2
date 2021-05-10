@@ -4,6 +4,12 @@
 
 using namespace std;
 
+Profil::Profil()
+{
+    username = mail = password = nom = prenom = sexe = ville = portable = ig = sc = fb = tt = type_profil = photo = "";
+    age = -1;
+}
+
 Profil::Profil(const string nusername, const string nmail, const string npassword, const string nnom,const string nprenom, const int nage, 
     const string nsexe,const string nville, const string nportable, const string nig, const string nsc , const string nfb, 
     const string ntt, const string ntype_profil, const vector<string> ntype_sport, const string nphoto)
@@ -28,6 +34,11 @@ Profil::Profil(const string nusername, const string nmail, const string npasswor
 
 Profil::~Profil()
 {
+    this->vider();
+}
+
+void Profil::vider()
+{
     username = mail = password = nom = prenom = sexe = ville = portable = ig = sc = fb = tt = type_profil = photo = "";
     age = 0;
     type_sport.clear();
@@ -44,6 +55,11 @@ string Profil::getUsername() const
 string Profil::getMail() const
 {
     return mail;
+}
+
+string Profil::getPassword() const
+{
+    return password;
 }
 
 string Profil::getNom() const
@@ -346,4 +362,54 @@ void Profil::testRegression()
     assert(profil1.getFollowing()[0] != "nicolas");
     profil1.deleteProfil("54321");
     assert(profil1.getUsername() == "");
+}
+
+
+void Profil::operator=(const Profil & recopie)
+{
+    this->vider();
+
+    username = recopie.username;
+    mail = recopie.mail;
+    password = recopie.password;
+    nom = recopie.nom;
+    prenom = recopie.prenom;
+    sexe = recopie.sexe;
+    ville = recopie.ville;
+    portable = recopie.portable;
+    ig = recopie.ig;
+    sc = recopie.sc;
+    fb = recopie.fb;
+    tt = recopie.tt;
+    type_profil = recopie.type_profil;
+    age = recopie.age;
+    type_sport = recopie.type_sport;
+    avis = recopie.avis;
+    followers = recopie.followers;
+    following = recopie.following;
+}
+
+
+bool Profil::existeFollowers(const string susername)
+{
+    for(int i=0; i < followers.size(); i++)
+    {
+        if(susername == followers[i])
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Profil::existeFollowing(const string susername)
+{
+    for(int i=0; i < following.size(); i++)
+    {
+        if(susername == following[i])
+        {
+            return true;
+        }
+    }
+    return false;
 }
