@@ -1,0 +1,616 @@
+\hypertarget{class_profil}{}\doxysection{Profil Class Reference}
+\label{class_profil}\index{Profil@{Profil}}
+
+
+La classe \mbox{\hyperlink{class_profil}{Profil}} contient une chaine de caractères qui est username, une chaine de caractères qui est adresse mail, une chaine de caractères qui est password, avec le nom, le prenom, l\textquotesingle{}age, le sexe, la ville, le portable , l\textquotesingle{}instagram, le snapchat, le facebook et le tiktok (les reseaux sont facultatifs), une chaine de caractères qui est type de profil, un tableau de chaines de caractères qui est type de sport, une chaine de caractères qui est lien vers une photo, un tableau des liens sur \mbox{\hyperlink{class_avis}{Avis}}, un tableau de chaines de caractères qui est liste de followers, un tableau de chaines de caractères qui est liste de following.  
+
+
+
+
+{\ttfamily \#include $<$Profil.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_profil_a9cf45b5f8ae024e79eaeb2c4639e2e1e}\label{class_profil_a9cf45b5f8ae024e79eaeb2c4639e2e1e}} 
+\mbox{\hyperlink{class_profil_a9cf45b5f8ae024e79eaeb2c4639e2e1e}{Profil}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_profil_a63c11189e9da9cea9274288be03ef6b8}{Profil}} (const string nusername, const string nmail, const string npassword, const string nnom, const string nprenom, const int nage, const string nsexe, const string nville, const string nportable, const string nig, const string nsc, const string nfb, const string ntt, const string ntype\+\_\+profil, const vector$<$ string $>$ ntype\+\_\+sport, const string nphoto)
+\begin{DoxyCompactList}\small\item\em Constructeur avec des valeurs données. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a3a77115b1e734e5057d1dc87fd7648ff}\label{class_profil_a3a77115b1e734e5057d1dc87fd7648ff}} 
+\mbox{\hyperlink{class_profil_a3a77115b1e734e5057d1dc87fd7648ff}{$\sim$\+Profil}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a89bd2c78185c83d343a2cb73b942d046}\label{class_profil_a89bd2c78185c83d343a2cb73b942d046}} 
+void \mbox{\hyperlink{class_profil_a89bd2c78185c83d343a2cb73b942d046}{vider}} ()
+\begin{DoxyCompactList}\small\item\em Fonction vide tout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a6bc7e0ebc73e31b03b0ab1f84cd5f09e}\label{class_profil_a6bc7e0ebc73e31b03b0ab1f84cd5f09e}} 
+string \mbox{\hyperlink{class_profil_a6bc7e0ebc73e31b03b0ab1f84cd5f09e}{get\+Username}} () const
+\begin{DoxyCompactList}\small\item\em Retourne une chaine de caractères contenant username. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a918342514b5a4cf094d5b15ed02b880a}\label{class_profil_a918342514b5a4cf094d5b15ed02b880a}} 
+string \mbox{\hyperlink{class_profil_a918342514b5a4cf094d5b15ed02b880a}{get\+Mail}} () const
+\begin{DoxyCompactList}\small\item\em Retourne une chaine de caractères contenant l\textquotesingle{}adresse mail. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a68fa4cf9161b20a350135e643816c7ee}\label{class_profil_a68fa4cf9161b20a350135e643816c7ee}} 
+string \mbox{\hyperlink{class_profil_a68fa4cf9161b20a350135e643816c7ee}{get\+Password}} () const
+\begin{DoxyCompactList}\small\item\em Retourne une chaine de caractères contenant le mot de passe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a6979eece0b349c55b59b1f93286bb3c8}\label{class_profil_a6979eece0b349c55b59b1f93286bb3c8}} 
+string \mbox{\hyperlink{class_profil_a6979eece0b349c55b59b1f93286bb3c8}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em retourne le Nom de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a915ddb19c062b5fa6d64e68823b9f6da}\label{class_profil_a915ddb19c062b5fa6d64e68823b9f6da}} 
+string \mbox{\hyperlink{class_profil_a915ddb19c062b5fa6d64e68823b9f6da}{get\+Prenom}} () const
+\begin{DoxyCompactList}\small\item\em retourne le Prenom de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a3a5b4b2282b0e1d265569db4c836b5ba}\label{class_profil_a3a5b4b2282b0e1d265569db4c836b5ba}} 
+int \mbox{\hyperlink{class_profil_a3a5b4b2282b0e1d265569db4c836b5ba}{get\+Age}} () const
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}age de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a04aae658dd1dc4eddd10984c9ccfea05}\label{class_profil_a04aae658dd1dc4eddd10984c9ccfea05}} 
+string \mbox{\hyperlink{class_profil_a04aae658dd1dc4eddd10984c9ccfea05}{get\+Sexe}} () const
+\begin{DoxyCompactList}\small\item\em retourne le Sexe de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a0986e677b0b9517dad43b2df63f3784a}\label{class_profil_a0986e677b0b9517dad43b2df63f3784a}} 
+string \mbox{\hyperlink{class_profil_a0986e677b0b9517dad43b2df63f3784a}{get\+Ville}} () const
+\begin{DoxyCompactList}\small\item\em retourne la ville de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a0cdcf127b8729590bc884c69129a6775}\label{class_profil_a0cdcf127b8729590bc884c69129a6775}} 
+string \mbox{\hyperlink{class_profil_a0cdcf127b8729590bc884c69129a6775}{get\+Portable}} () const
+\begin{DoxyCompactList}\small\item\em retourne le numero de portable de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a255e427615d720cd052966776f4022a4}\label{class_profil_a255e427615d720cd052966776f4022a4}} 
+string \mbox{\hyperlink{class_profil_a255e427615d720cd052966776f4022a4}{get\+IG}} () const
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}instagram\textquotesingle{} de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a7e19f5b2cf111f313795c1a1d183775c}\label{class_profil_a7e19f5b2cf111f313795c1a1d183775c}} 
+string \mbox{\hyperlink{class_profil_a7e19f5b2cf111f313795c1a1d183775c}{get\+SC}} () const
+\begin{DoxyCompactList}\small\item\em retourne le snapchat de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_ac19284abbfc67abb99da2de03e41c000}\label{class_profil_ac19284abbfc67abb99da2de03e41c000}} 
+string \mbox{\hyperlink{class_profil_ac19284abbfc67abb99da2de03e41c000}{get\+FB}} () const
+\begin{DoxyCompactList}\small\item\em retourne le facebook de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a14ca6bccabf4234dcf78f2871a51eb26}\label{class_profil_a14ca6bccabf4234dcf78f2871a51eb26}} 
+string \mbox{\hyperlink{class_profil_a14ca6bccabf4234dcf78f2871a51eb26}{get\+TT}} () const
+\begin{DoxyCompactList}\small\item\em retourne le tiktok de l\textquotesingle{}utilisateur ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a872f7917903279e71dd39ca06dfbfb80}\label{class_profil_a872f7917903279e71dd39ca06dfbfb80}} 
+string \mbox{\hyperlink{class_profil_a872f7917903279e71dd39ca06dfbfb80}{get\+Type\+Profil}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le type du profil. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a4ef2dfe1be381dafedef7101185be282}\label{class_profil_a4ef2dfe1be381dafedef7101185be282}} 
+vector$<$ string $>$ \mbox{\hyperlink{class_profil_a4ef2dfe1be381dafedef7101185be282}{get\+Type\+Sport}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le tableau de type de sport. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_ad3a4c77e6a24a384dd3d245ceabfa2a5}\label{class_profil_ad3a4c77e6a24a384dd3d245ceabfa2a5}} 
+string \mbox{\hyperlink{class_profil_ad3a4c77e6a24a384dd3d245ceabfa2a5}{get\+Photo}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le lien de la photo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_af6105db31e437d761e7f7da51c12c9d2}\label{class_profil_af6105db31e437d761e7f7da51c12c9d2}} 
+vector$<$ string $>$ \mbox{\hyperlink{class_profil_af6105db31e437d761e7f7da51c12c9d2}{get\+Followers}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le tableau de followers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a313007e0e45ba6556abfadcf8f18854a}\label{class_profil_a313007e0e45ba6556abfadcf8f18854a}} 
+vector$<$ string $>$ \mbox{\hyperlink{class_profil_a313007e0e45ba6556abfadcf8f18854a}{get\+Following}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le type de following. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_a758a6ca2e4ed6edf11421fb862d0b3f4}\label{class_profil_a758a6ca2e4ed6edf11421fb862d0b3f4}} 
+vector$<$ \mbox{\hyperlink{class_avis}{Avis}} $>$ \mbox{\hyperlink{class_profil_a758a6ca2e4ed6edf11421fb862d0b3f4}{get\+Avis}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le tableau des liens sur \mbox{\hyperlink{class_avis}{Avis}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a693a00ef19bef63f283ccdeb70a10156}{set\+Username}} (const string nusername)
+\begin{DoxyCompactList}\small\item\em Changement d\textquotesingle{}username. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profil_a8539ec19838c720a5cea8cddf19eff4d}{set\+Mail}} (const string nmail, const string apassword)
+\begin{DoxyCompactList}\small\item\em Changement de mail. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profil_a99257aa6cc25bfdded8bfeb44f56d8d2}{set\+Password}} (const string npassword, const string apassword)
+\begin{DoxyCompactList}\small\item\em Changement de mot de passe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a66bd91b332e567a26992517a1da8d933}{set\+Nom}} (const string nnom)
+\begin{DoxyCompactList}\small\item\em change le Nom de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_ad38e48584d1c9a796625cffc19a6c9a9}{set\+Prenom}} (const string nprenom)
+\begin{DoxyCompactList}\small\item\em change le prenom de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a6e464f804974be74165862f00965f506}{set\+Age}} (const int nage)
+\begin{DoxyCompactList}\small\item\em change l\textquotesingle{}age de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a9b959f8dee9dd71f72d8be2da5dc3acc}{set\+Sexe}} (const string nsexe)
+\begin{DoxyCompactList}\small\item\em change le sexe de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_aae9bb0039415970167ecd492f7a88fd6}{set\+Ville}} (const string nville)
+\begin{DoxyCompactList}\small\item\em change la ville de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a34829ace7ab343414335a7a6e479356b}{set\+Portable}} (const string nportable)
+\begin{DoxyCompactList}\small\item\em change le numero de portable de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_aa7ac980856c3ccdecca843bff63c7456}{set\+IG}} (const string nig)
+\begin{DoxyCompactList}\small\item\em change l\textquotesingle{}instagram de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_afe0c0613ed99f66a3acf9c60c922da36}{set\+SC}} (const string nsc)
+\begin{DoxyCompactList}\small\item\em change le snapchat de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a8a993db6a1714f9538d38d1d1e337d96}{set\+FB}} (const string nfb)
+\begin{DoxyCompactList}\small\item\em change le facebook de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a8e209bbf75ae5090c0d7c8d9ab224a71}{set\+TT}} (const string ntt)
+\begin{DoxyCompactList}\small\item\em change le tiktok de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a219341d25b4fbb63fc0c1ff4efa87425}{set\+Type\+Profil}} (const string ntype\+\_\+profil)
+\begin{DoxyCompactList}\small\item\em Changement de type du profil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_adceb8e66c730040e18b5edc6a172a70d}{set\+Photo}} (const string nphoto)
+\begin{DoxyCompactList}\small\item\em Changement de lien vers la photo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a0d5d565787a4163c16c286bd8bdcd1f3}{ajouter\+Type\+Sport}} (const string ntype\+\_\+sport)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un type de sport dans le tableau de type de sport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a56de4553d62507cd111ec1fc261d1fcf}{ajouter\+Followers}} (const string ausername)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}une nouvelle personne avec son username dans la liste de followers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a8d20679e73b08e6cf13c65727cb8863d}{ajouter\+Following}} (const string ausername)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}une nouvelle personne avec son username dans la liste de following. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profil_a035d0b024780de3f927e0d4a5a8e3619}{existe\+Followers}} (const string susername)
+\begin{DoxyCompactList}\small\item\em Fonction vérifie si username existe dans la liste Followers. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profil_a7089e9f5e5e32796e5fc14e4cf9b392a}{existe\+Following}} (const string susername)
+\begin{DoxyCompactList}\small\item\em Fonction vérifie si username existe dans la liste Following. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_ac78de13c6724c2b3626184e61ed5f92e}{creation\+Avis}} (const string ausername, const bool like, const string commentaire)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un nouveau avis dans le tableau des liens sur \mbox{\hyperlink{class_avis}{Avis}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_acb47d34de618be9d4fcf85f957318eb2}{delete\+Type\+Sport}} (const string dtype\+\_\+sport)
+\begin{DoxyCompactList}\small\item\em Suppression d\textquotesingle{}un type du sport dans le tableau de type de sport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a8c7dfbee1d9eee8b39e3811de4729803}{delete\+Followers}} (const string dfollowers)
+\begin{DoxyCompactList}\small\item\em Suppression d\textquotesingle{}un followers dans le tableau de followers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a3f7a747f478ce8e931a64008781b553f}{delete\+Following}} (const string dfollowing)
+\begin{DoxyCompactList}\small\item\em Suppression d\textquotesingle{}un following dans le tableau de following. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_ace2aac29dfa6d223b2dbc23f1e7c1d3f}{delete\+Profil}} (const string apassword)
+\begin{DoxyCompactList}\small\item\em Suppression du profil. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_profil_aed9db762e799442e7ba8bf5c7c98bc67}\label{class_profil_aed9db762e799442e7ba8bf5c7c98bc67}} 
+void \mbox{\hyperlink{class_profil_aed9db762e799442e7ba8bf5c7c98bc67}{test\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Test de regression teste toutes les fonctions de la classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_profil_a4f4fe16bcf5a5d3618b8c1fb38e6b196}{operator=}} (const \mbox{\hyperlink{class_profil}{Profil}} \&recopie)
+\begin{DoxyCompactList}\small\item\em Operateur= permet de remplacer les données actuelles par les données d\textquotesingle{}un autre \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \mbox{\hyperlink{class_profil}{Profil}} contient une chaine de caractères qui est username, une chaine de caractères qui est adresse mail, une chaine de caractères qui est password, avec le nom, le prenom, l\textquotesingle{}age, le sexe, la ville, le portable , l\textquotesingle{}instagram, le snapchat, le facebook et le tiktok (les reseaux sont facultatifs), une chaine de caractères qui est type de profil, un tableau de chaines de caractères qui est type de sport, une chaine de caractères qui est lien vers une photo, un tableau des liens sur \mbox{\hyperlink{class_avis}{Avis}}, un tableau de chaines de caractères qui est liste de followers, un tableau de chaines de caractères qui est liste de following. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_profil_a63c11189e9da9cea9274288be03ef6b8}\label{class_profil_a63c11189e9da9cea9274288be03ef6b8}} 
+\index{Profil@{Profil}!Profil@{Profil}}
+\index{Profil@{Profil}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{Profil()}{Profil()}}
+{\footnotesize\ttfamily Profil\+::\+Profil (\begin{DoxyParamCaption}\item[{const string}]{nusername,  }\item[{const string}]{nmail,  }\item[{const string}]{npassword,  }\item[{const string}]{nnom,  }\item[{const string}]{nprenom,  }\item[{const int}]{nage,  }\item[{const string}]{nsexe,  }\item[{const string}]{nville,  }\item[{const string}]{nportable,  }\item[{const string}]{nig,  }\item[{const string}]{nsc,  }\item[{const string}]{nfb,  }\item[{const string}]{ntt,  }\item[{const string}]{ntype\+\_\+profil,  }\item[{const vector$<$ string $>$}]{ntype\+\_\+sport,  }\item[{const string}]{nphoto }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec des valeurs données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nusername} & \+: définition d\textquotesingle{}une chaine de caractères qui est username d\textquotesingle{}un nouveau utilisateur \\
+\hline
+{\em nmail} & \+: définition d\textquotesingle{}une chaine de caractères qui est adresse mail d\textquotesingle{}un nouveau utilisateur \\
+\hline
+{\em npassword} & \+: définition d\textquotesingle{}une chaine de caractères qui est mot de passe d\textquotesingle{}un nouveau utilisateur \\
+\hline
+{\em nnom} & \+:nom de l\textquotesingle{}utilisateur \\
+\hline
+{\em nprenom} & \+:prenom de l\textquotesingle{}utilisateur \\
+\hline
+{\em nage} & \+:age de l\textquotesingle{}utilisateur \\
+\hline
+{\em nsexe} & \+:sexe de l\textquotesingle{}utilisateur \\
+\hline
+{\em nville} & \+:ville de l\textquotesingle{}utilisateur \\
+\hline
+{\em nportable} & \+:numero de portable de l\textquotesingle{}utilisateur \\
+\hline
+{\em nig} & \+:instagram de l\textquotesingle{}utilisateur \\
+\hline
+{\em nsc} & \+:snapchat de l\textquotesingle{}utilisateur \\
+\hline
+{\em nfb} & \+:facebook de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+{\em ntt} & \+:tiktok de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+{\em ntype\+\_\+profil} & \+: définition d\textquotesingle{}une chaine de caractères qui est type de profil \\
+\hline
+{\em ntype\+\_\+sport} & \+: définition d\textquotesingle{}un tableau de chaines de caractères qui est type de sport, par défaut NULL \\
+\hline
+{\em nphoto} & \+: définition d\textquotesingle{}une chaine de caractères qui est lien vers une photo, par défaut NULL \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_profil_a56de4553d62507cd111ec1fc261d1fcf}\label{class_profil_a56de4553d62507cd111ec1fc261d1fcf}} 
+\index{Profil@{Profil}!ajouterFollowers@{ajouterFollowers}}
+\index{ajouterFollowers@{ajouterFollowers}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{ajouterFollowers()}{ajouterFollowers()}}
+{\footnotesize\ttfamily void Profil\+::ajouter\+Followers (\begin{DoxyParamCaption}\item[{const string}]{ausername }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}une nouvelle personne avec son username dans la liste de followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ausername} & \+: définition d\textquotesingle{}une chaine de caractères qui est username de la personne à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a8d20679e73b08e6cf13c65727cb8863d}\label{class_profil_a8d20679e73b08e6cf13c65727cb8863d}} 
+\index{Profil@{Profil}!ajouterFollowing@{ajouterFollowing}}
+\index{ajouterFollowing@{ajouterFollowing}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{ajouterFollowing()}{ajouterFollowing()}}
+{\footnotesize\ttfamily void Profil\+::ajouter\+Following (\begin{DoxyParamCaption}\item[{const string}]{ausername }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}une nouvelle personne avec son username dans la liste de following. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ausername} & \+: définition d\textquotesingle{}une chaine de caractères qui est username de la personne à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a0d5d565787a4163c16c286bd8bdcd1f3}\label{class_profil_a0d5d565787a4163c16c286bd8bdcd1f3}} 
+\index{Profil@{Profil}!ajouterTypeSport@{ajouterTypeSport}}
+\index{ajouterTypeSport@{ajouterTypeSport}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{ajouterTypeSport()}{ajouterTypeSport()}}
+{\footnotesize\ttfamily void Profil\+::ajouter\+Type\+Sport (\begin{DoxyParamCaption}\item[{const string}]{ntype\+\_\+sport }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}un type de sport dans le tableau de type de sport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntype\+\_\+sport} & \+: définition d\textquotesingle{}une chaine de caractères qui est nouveau type de sport à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_ac78de13c6724c2b3626184e61ed5f92e}\label{class_profil_ac78de13c6724c2b3626184e61ed5f92e}} 
+\index{Profil@{Profil}!creationAvis@{creationAvis}}
+\index{creationAvis@{creationAvis}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{creationAvis()}{creationAvis()}}
+{\footnotesize\ttfamily void Profil\+::creation\+Avis (\begin{DoxyParamCaption}\item[{const string}]{ausername,  }\item[{const bool}]{like,  }\item[{const string}]{commentaire }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un nouveau avis dans le tableau des liens sur \mbox{\hyperlink{class_avis}{Avis}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \+: définition d\textquotesingle{}une chaine de caractères qui est username de la personne qui a laissé avis \\
+\hline
+{\em like} & \+: définition d\textquotesingle{}un booléen, si true = liké si false = pas liké \\
+\hline
+{\em commentaire} & \+: définition d\textquotesingle{}une chaine de caractères qui est un commantaire de la personne qui a laissé avis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a8c7dfbee1d9eee8b39e3811de4729803}\label{class_profil_a8c7dfbee1d9eee8b39e3811de4729803}} 
+\index{Profil@{Profil}!deleteFollowers@{deleteFollowers}}
+\index{deleteFollowers@{deleteFollowers}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{deleteFollowers()}{deleteFollowers()}}
+{\footnotesize\ttfamily void Profil\+::delete\+Followers (\begin{DoxyParamCaption}\item[{const string}]{dfollowers }\end{DoxyParamCaption})}
+
+
+
+Suppression d\textquotesingle{}un followers dans le tableau de followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dfollowers} & \+: définition d\textquotesingle{}une chaine de caractères qui est username de la personne à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a3f7a747f478ce8e931a64008781b553f}\label{class_profil_a3f7a747f478ce8e931a64008781b553f}} 
+\index{Profil@{Profil}!deleteFollowing@{deleteFollowing}}
+\index{deleteFollowing@{deleteFollowing}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{deleteFollowing()}{deleteFollowing()}}
+{\footnotesize\ttfamily void Profil\+::delete\+Following (\begin{DoxyParamCaption}\item[{const string}]{dfollowing }\end{DoxyParamCaption})}
+
+
+
+Suppression d\textquotesingle{}un following dans le tableau de following. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dfollowing} & \+: définition d\textquotesingle{}une chaine de caractères qui est username de la personne à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_ace2aac29dfa6d223b2dbc23f1e7c1d3f}\label{class_profil_ace2aac29dfa6d223b2dbc23f1e7c1d3f}} 
+\index{Profil@{Profil}!deleteProfil@{deleteProfil}}
+\index{deleteProfil@{deleteProfil}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{deleteProfil()}{deleteProfil()}}
+{\footnotesize\ttfamily void Profil\+::delete\+Profil (\begin{DoxyParamCaption}\item[{const string}]{apassword }\end{DoxyParamCaption})}
+
+
+
+Suppression du profil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apassword} & \+: définition d\textquotesingle{}une chaine de caractères qui est mot de passe du profil pour pouvoir identifier la personne et supprimer le profil \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_acb47d34de618be9d4fcf85f957318eb2}\label{class_profil_acb47d34de618be9d4fcf85f957318eb2}} 
+\index{Profil@{Profil}!deleteTypeSport@{deleteTypeSport}}
+\index{deleteTypeSport@{deleteTypeSport}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{deleteTypeSport()}{deleteTypeSport()}}
+{\footnotesize\ttfamily void Profil\+::delete\+Type\+Sport (\begin{DoxyParamCaption}\item[{const string}]{dtype\+\_\+sport }\end{DoxyParamCaption})}
+
+
+
+Suppression d\textquotesingle{}un type du sport dans le tableau de type de sport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dtype\+\_\+sport} & \+: définition d\textquotesingle{}une chaine de caractères qui est un type de sport à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a035d0b024780de3f927e0d4a5a8e3619}\label{class_profil_a035d0b024780de3f927e0d4a5a8e3619}} 
+\index{Profil@{Profil}!existeFollowers@{existeFollowers}}
+\index{existeFollowers@{existeFollowers}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{existeFollowers()}{existeFollowers()}}
+{\footnotesize\ttfamily bool Profil\+::existe\+Followers (\begin{DoxyParamCaption}\item[{const string}]{susername }\end{DoxyParamCaption})}
+
+
+
+Fonction vérifie si username existe dans la liste Followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em susername} & \+: username à vérifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a7089e9f5e5e32796e5fc14e4cf9b392a}\label{class_profil_a7089e9f5e5e32796e5fc14e4cf9b392a}} 
+\index{Profil@{Profil}!existeFollowing@{existeFollowing}}
+\index{existeFollowing@{existeFollowing}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{existeFollowing()}{existeFollowing()}}
+{\footnotesize\ttfamily bool Profil\+::existe\+Following (\begin{DoxyParamCaption}\item[{const string}]{susername }\end{DoxyParamCaption})}
+
+
+
+Fonction vérifie si username existe dans la liste Following. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em susername} & \+: username à vérifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a4f4fe16bcf5a5d3618b8c1fb38e6b196}\label{class_profil_a4f4fe16bcf5a5d3618b8c1fb38e6b196}} 
+\index{Profil@{Profil}!operator=@{operator=}}
+\index{operator=@{operator=}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Profil\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_profil}{Profil}} \&}]{recopie }\end{DoxyParamCaption})}
+
+
+
+Operateur= permet de remplacer les données actuelles par les données d\textquotesingle{}un autre \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recopie} & \+: \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a6e464f804974be74165862f00965f506}\label{class_profil_a6e464f804974be74165862f00965f506}} 
+\index{Profil@{Profil}!setAge@{setAge}}
+\index{setAge@{setAge}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setAge()}{setAge()}}
+{\footnotesize\ttfamily void Profil\+::set\+Age (\begin{DoxyParamCaption}\item[{const int}]{nage }\end{DoxyParamCaption})}
+
+
+
+change l\textquotesingle{}age de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nage} & \+: le nouvel age de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a8a993db6a1714f9538d38d1d1e337d96}\label{class_profil_a8a993db6a1714f9538d38d1d1e337d96}} 
+\index{Profil@{Profil}!setFB@{setFB}}
+\index{setFB@{setFB}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setFB()}{setFB()}}
+{\footnotesize\ttfamily void Profil\+::set\+FB (\begin{DoxyParamCaption}\item[{const string}]{nfb }\end{DoxyParamCaption})}
+
+
+
+change le facebook de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nfb} & \+: le nouveaux facebook de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_aa7ac980856c3ccdecca843bff63c7456}\label{class_profil_aa7ac980856c3ccdecca843bff63c7456}} 
+\index{Profil@{Profil}!setIG@{setIG}}
+\index{setIG@{setIG}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setIG()}{setIG()}}
+{\footnotesize\ttfamily void Profil\+::set\+IG (\begin{DoxyParamCaption}\item[{const string}]{nig }\end{DoxyParamCaption})}
+
+
+
+change l\textquotesingle{}instagram de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nig} & \+: le nouvel instagram de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a8539ec19838c720a5cea8cddf19eff4d}\label{class_profil_a8539ec19838c720a5cea8cddf19eff4d}} 
+\index{Profil@{Profil}!setMail@{setMail}}
+\index{setMail@{setMail}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setMail()}{setMail()}}
+{\footnotesize\ttfamily bool Profil\+::set\+Mail (\begin{DoxyParamCaption}\item[{const string}]{nmail,  }\item[{const string}]{apassword }\end{DoxyParamCaption})}
+
+
+
+Changement de mail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nmail} & \+: définition d\textquotesingle{}une chaine de caractères qui est une nouvelle adresse mail d\textquotesingle{}utilisateur \\
+\hline
+{\em apassword} & \+: définition d\textquotesingle{}une chaine de caractères qui est mot de passe actuel mail d\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a66bd91b332e567a26992517a1da8d933}\label{class_profil_a66bd91b332e567a26992517a1da8d933}} 
+\index{Profil@{Profil}!setNom@{setNom}}
+\index{setNom@{setNom}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setNom()}{setNom()}}
+{\footnotesize\ttfamily void Profil\+::set\+Nom (\begin{DoxyParamCaption}\item[{const string}]{nnom }\end{DoxyParamCaption})}
+
+
+
+change le Nom de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nnom} & \+: le nouveaux nom de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a99257aa6cc25bfdded8bfeb44f56d8d2}\label{class_profil_a99257aa6cc25bfdded8bfeb44f56d8d2}} 
+\index{Profil@{Profil}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily bool Profil\+::set\+Password (\begin{DoxyParamCaption}\item[{const string}]{npassword,  }\item[{const string}]{apassword }\end{DoxyParamCaption})}
+
+
+
+Changement de mot de passe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em npassword} & \+: définition d\textquotesingle{}une chaine de caractères qui est un nouveau mot de passe d\textquotesingle{}utilisateur \\
+\hline
+{\em apassword} & \+: définition d\textquotesingle{}une chaine de caractères qui est mot de passe actuel mail d\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_adceb8e66c730040e18b5edc6a172a70d}\label{class_profil_adceb8e66c730040e18b5edc6a172a70d}} 
+\index{Profil@{Profil}!setPhoto@{setPhoto}}
+\index{setPhoto@{setPhoto}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setPhoto()}{setPhoto()}}
+{\footnotesize\ttfamily void Profil\+::set\+Photo (\begin{DoxyParamCaption}\item[{const string}]{nphoto }\end{DoxyParamCaption})}
+
+
+
+Changement de lien vers la photo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nphoto} & \+: définition d\textquotesingle{}une chaine de caractères qui est nouvelle lien vers une photo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a34829ace7ab343414335a7a6e479356b}\label{class_profil_a34829ace7ab343414335a7a6e479356b}} 
+\index{Profil@{Profil}!setPortable@{setPortable}}
+\index{setPortable@{setPortable}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setPortable()}{setPortable()}}
+{\footnotesize\ttfamily void Profil\+::set\+Portable (\begin{DoxyParamCaption}\item[{const string}]{nportable }\end{DoxyParamCaption})}
+
+
+
+change le numero de portable de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nportable} & \+: le nouveaux numero de portable de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_ad38e48584d1c9a796625cffc19a6c9a9}\label{class_profil_ad38e48584d1c9a796625cffc19a6c9a9}} 
+\index{Profil@{Profil}!setPrenom@{setPrenom}}
+\index{setPrenom@{setPrenom}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setPrenom()}{setPrenom()}}
+{\footnotesize\ttfamily void Profil\+::set\+Prenom (\begin{DoxyParamCaption}\item[{const string}]{nprenom }\end{DoxyParamCaption})}
+
+
+
+change le prenom de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nprenom} & \+: le nouveaux prenom de l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_afe0c0613ed99f66a3acf9c60c922da36}\label{class_profil_afe0c0613ed99f66a3acf9c60c922da36}} 
+\index{Profil@{Profil}!setSC@{setSC}}
+\index{setSC@{setSC}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setSC()}{setSC()}}
+{\footnotesize\ttfamily void Profil\+::set\+SC (\begin{DoxyParamCaption}\item[{const string}]{nsc }\end{DoxyParamCaption})}
+
+
+
+change le snapchat de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nsc} & \+: le nouveaux snapchat de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a9b959f8dee9dd71f72d8be2da5dc3acc}\label{class_profil_a9b959f8dee9dd71f72d8be2da5dc3acc}} 
+\index{Profil@{Profil}!setSexe@{setSexe}}
+\index{setSexe@{setSexe}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setSexe()}{setSexe()}}
+{\footnotesize\ttfamily void Profil\+::set\+Sexe (\begin{DoxyParamCaption}\item[{const string}]{nsexe }\end{DoxyParamCaption})}
+
+
+
+change le sexe de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nsexe} & \+: le nouveaux sexe de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a8e209bbf75ae5090c0d7c8d9ab224a71}\label{class_profil_a8e209bbf75ae5090c0d7c8d9ab224a71}} 
+\index{Profil@{Profil}!setTT@{setTT}}
+\index{setTT@{setTT}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setTT()}{setTT()}}
+{\footnotesize\ttfamily void Profil\+::set\+TT (\begin{DoxyParamCaption}\item[{const string}]{ntt }\end{DoxyParamCaption})}
+
+
+
+change le tiktok de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntt} & \+: le nouveaux tiktok de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a219341d25b4fbb63fc0c1ff4efa87425}\label{class_profil_a219341d25b4fbb63fc0c1ff4efa87425}} 
+\index{Profil@{Profil}!setTypeProfil@{setTypeProfil}}
+\index{setTypeProfil@{setTypeProfil}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setTypeProfil()}{setTypeProfil()}}
+{\footnotesize\ttfamily void Profil\+::set\+Type\+Profil (\begin{DoxyParamCaption}\item[{const string}]{ntype\+\_\+profil }\end{DoxyParamCaption})}
+
+
+
+Changement de type du profil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ntype\+\_\+profil} & \+: définition d\textquotesingle{}une chaine de caractères qui est nouveau type de profil \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_a693a00ef19bef63f283ccdeb70a10156}\label{class_profil_a693a00ef19bef63f283ccdeb70a10156}} 
+\index{Profil@{Profil}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily void Profil\+::set\+Username (\begin{DoxyParamCaption}\item[{const string}]{nusername }\end{DoxyParamCaption})}
+
+
+
+Changement d\textquotesingle{}username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nusername} & \+: définition d\textquotesingle{}une chaine de caractères qui est un nouveau username d\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_profil_aae9bb0039415970167ecd492f7a88fd6}\label{class_profil_aae9bb0039415970167ecd492f7a88fd6}} 
+\index{Profil@{Profil}!setVille@{setVille}}
+\index{setVille@{setVille}!Profil@{Profil}}
+\doxysubsubsection{\texorpdfstring{setVille()}{setVille()}}
+{\footnotesize\ttfamily void Profil\+::set\+Ville (\begin{DoxyParamCaption}\item[{const string}]{nville }\end{DoxyParamCaption})}
+
+
+
+change la ville de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nville} & \+: la nouvelle ville de l\textquotesingle{}utilisateur ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Profil.\+h\item 
+src/core/Profil.\+cpp\end{DoxyCompactItemize}

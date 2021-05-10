@@ -1,0 +1,336 @@
+\hypertarget{class_ensemble_profils}{}\doxysection{Ensemble\+Profils Class Reference}
+\label{class_ensemble_profils}\index{EnsembleProfils@{EnsembleProfils}}
+
+
+La classe \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} est composée d\textquotesingle{}une liste de profils. Elle sert à gérer l\textquotesingle{}ensemble des profils de l\textquotesingle{}application (inscription, suppression de compte) ainsi que les interactions entre ceux-\/ci (matching, abonnements, avis).  
+
+
+
+
+{\ttfamily \#include $<$Ensemble\+Profils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ensemble_profils_adb9aee81e45db680019253a1d91625f1}\label{class_ensemble_profils_adb9aee81e45db680019253a1d91625f1}} 
+\mbox{\hyperlink{class_ensemble_profils_adb9aee81e45db680019253a1d91625f1}{Ensemble\+Profils}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ensemble_profils_a16758fc642390fe41769276b5eeecec6}\label{class_ensemble_profils_a16758fc642390fe41769276b5eeecec6}} 
+\mbox{\hyperlink{class_ensemble_profils_a16758fc642390fe41769276b5eeecec6}{Ensemble\+Profils}} (const \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} \&recopie)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ensemble_profils_a3e3846f5e289513db364f0c9882adece}\label{class_ensemble_profils_a3e3846f5e289513db364f0c9882adece}} 
+\mbox{\hyperlink{class_ensemble_profils_a3e3846f5e289513db364f0c9882adece}{$\sim$\+Ensemble\+Profils}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ensemble_profils_ae8d4490749c7ab8d433b934923188098}{add\+Profil}} (const \mbox{\hyperlink{class_profil}{Profil}} \&p)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}ajouter un profil à la liste des profils. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ensemble_profils_addcfbb6f9ea9951aed8ed26644c17234}\label{class_ensemble_profils_addcfbb6f9ea9951aed8ed26644c17234}} 
+int \mbox{\hyperlink{class_ensemble_profils_addcfbb6f9ea9951aed8ed26644c17234}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Fonction donne la taille de la liste profils. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_profil}{Profil}} \& \mbox{\hyperlink{class_ensemble_profils_a2a22743837783472cf7bf8a3ec92cceb}{get\+Profil}} (const string susername)
+\begin{DoxyCompactList}\small\item\em Fonction retourne \mbox{\hyperlink{class_profil}{Profil}} avec username demandé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ensemble_profils_adfbb8a2384a166d46dd5ef670780b9b3}{delete\+Profil}} (const string username)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de supprimer un profil de la liste des profils. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ensemble_profils_a67197a6cdb90bd9754f9de61181af801}{existe\+Username}} (const string username)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de savoir si un username est déjà utilisé \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ensemble_profils_a135b3bfabc8b2dfc8c0ecd18306bc8a0}\label{class_ensemble_profils_a135b3bfabc8b2dfc8c0ecd18306bc8a0}} 
+bool \mbox{\hyperlink{class_ensemble_profils_a135b3bfabc8b2dfc8c0ecd18306bc8a0}{verif\+Password}} (const string username, const string password)
+\begin{DoxyCompactList}\small\item\em Fonction vérifie si le mot de passe appartient à tel profil via username. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ensemble_profils_a2698934c2e89df7141934c7151cc06b5}{existe\+Mail}} (const string mail)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de savoir si une adresse mail est déjà utilisée. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_a046aaa766af3a37632c909d4bc88565e}{match\+Type\+Sport}} (const \mbox{\hyperlink{class_profil}{Profil}} \&profil)
+\begin{DoxyCompactList}\small\item\em Matching par type de sport. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_ad01b3d1362171e6602f725b78eb80b2e}{match\+Age}} (const int min\+Age, const int max\+Age, string username)
+\begin{DoxyCompactList}\small\item\em Matching par age. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_a58fe665489b4b46eef79574719a74238}{match\+Ville}} (const string ville, const string username)
+\begin{DoxyCompactList}\small\item\em Matching par ville. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_a1834ff803861eee1f7aad5df7d36e219}{match\+Sexe}} (const string sexe, const string username)
+\begin{DoxyCompactList}\small\item\em Matching par sexe. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_a37d9903316b12bf42e2d68d4948a9ede}{matching}} (const \mbox{\hyperlink{class_profil}{Profil}} \&profil, const int min\+Age, const int max\+Age, const string ville, const string sexe)
+\begin{DoxyCompactList}\small\item\em Recherche les profils correspondants aux critères choisis par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_afc9e4bf075caf4d1528b9568d01aa7dd}{matching\+ASV}} (const int min\+Age, const int max\+Age, const string sexe, const string ville, const string username)
+\begin{DoxyCompactList}\small\item\em Recherche les profils correspondants aux critères choisis par l\textquotesingle{}utilisateur sans prendre en compte les types de sport. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_ab5293e36c4164f5bed93594e098d3978}{compare\+Matchs}} (const vector$<$ string $>$ tab1, const vector$<$ string $>$ tab2)
+\begin{DoxyCompactList}\small\item\em Compare 2 listes et rend une liste avec les memes valeurs. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ensemble_profils_a945aac2a4c98cc8b4f4d7ef3935706ee}{tri\+Enleve}} (vector$<$ string $>$ tabmatchs, const vector$<$ string $>$ tab)
+\begin{DoxyCompactList}\small\item\em Enleve du tableau tabmatchs les valeurs qui ne sont pas présentes dans tab. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_profil}{Profil}} \& \mbox{\hyperlink{class_ensemble_profils_af53d5a6121fe90090fecaa58f2a0726c}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em Operateur\mbox{[}\mbox{]} pour pouvoir faire par exemple profils\mbox{[}0\mbox{]}.get\+Username() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ensemble_profils_ae47f467e7dc805646e610a75902b75fb}{operator=}} (const \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} \&recopie)
+\begin{DoxyCompactList}\small\item\em Operateur= permet de remplacer les données actuelles par les données d\textquotesingle{}un autre \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ensemble_profils_a49b38015ac5a66e75c66e0769211cac6}\label{class_ensemble_profils_a49b38015ac5a66e75c66e0769211cac6}} 
+void \mbox{\hyperlink{class_ensemble_profils_a49b38015ac5a66e75c66e0769211cac6}{test\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Test de regression teste toutes les fonctions de la classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} est composée d\textquotesingle{}une liste de profils. Elle sert à gérer l\textquotesingle{}ensemble des profils de l\textquotesingle{}application (inscription, suppression de compte) ainsi que les interactions entre ceux-\/ci (matching, abonnements, avis). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ensemble_profils_ae8d4490749c7ab8d433b934923188098}\label{class_ensemble_profils_ae8d4490749c7ab8d433b934923188098}} 
+\index{EnsembleProfils@{EnsembleProfils}!addProfil@{addProfil}}
+\index{addProfil@{addProfil}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{addProfil()}{addProfil()}}
+{\footnotesize\ttfamily void Ensemble\+Profils\+::add\+Profil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_profil}{Profil}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant d\textquotesingle{}ajouter un profil à la liste des profils. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \+: Référence sur le profil à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_ab5293e36c4164f5bed93594e098d3978}\label{class_ensemble_profils_ab5293e36c4164f5bed93594e098d3978}} 
+\index{EnsembleProfils@{EnsembleProfils}!compareMatchs@{compareMatchs}}
+\index{compareMatchs@{compareMatchs}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{compareMatchs()}{compareMatchs()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::compare\+Matchs (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$}]{tab1,  }\item[{const vector$<$ string $>$}]{tab2 }\end{DoxyParamCaption})}
+
+
+
+Compare 2 listes et rend une liste avec les memes valeurs. 
+
+Fonction pour comparer 2 listes de username et renvoyer une liste avec les usernames communs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab1} & \+: 1er tableau \\
+\hline
+{\em tab2} & \+: 2ème tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_adfbb8a2384a166d46dd5ef670780b9b3}\label{class_ensemble_profils_adfbb8a2384a166d46dd5ef670780b9b3}} 
+\index{EnsembleProfils@{EnsembleProfils}!deleteProfil@{deleteProfil}}
+\index{deleteProfil@{deleteProfil}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{deleteProfil()}{deleteProfil()}}
+{\footnotesize\ttfamily void Ensemble\+Profils\+::delete\+Profil (\begin{DoxyParamCaption}\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de supprimer un profil de la liste des profils. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \+: Nom du profil à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a2698934c2e89df7141934c7151cc06b5}\label{class_ensemble_profils_a2698934c2e89df7141934c7151cc06b5}} 
+\index{EnsembleProfils@{EnsembleProfils}!existeMail@{existeMail}}
+\index{existeMail@{existeMail}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{existeMail()}{existeMail()}}
+{\footnotesize\ttfamily bool Ensemble\+Profils\+::existe\+Mail (\begin{DoxyParamCaption}\item[{const string}]{mail }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de savoir si une adresse mail est déjà utilisée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mail} & \+: adresse mail a comparer avec celles déjà existantes dans la liste de profils \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a67197a6cdb90bd9754f9de61181af801}\label{class_ensemble_profils_a67197a6cdb90bd9754f9de61181af801}} 
+\index{EnsembleProfils@{EnsembleProfils}!existeUsername@{existeUsername}}
+\index{existeUsername@{existeUsername}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{existeUsername()}{existeUsername()}}
+{\footnotesize\ttfamily bool Ensemble\+Profils\+::existe\+Username (\begin{DoxyParamCaption}\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de savoir si un username est déjà utilisé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \+: username a comparer avec ceux déjà existants dans la liste de profils \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a2a22743837783472cf7bf8a3ec92cceb}\label{class_ensemble_profils_a2a22743837783472cf7bf8a3ec92cceb}} 
+\index{EnsembleProfils@{EnsembleProfils}!getProfil@{getProfil}}
+\index{getProfil@{getProfil}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{getProfil()}{getProfil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_profil}{Profil}} \& Ensemble\+Profils\+::get\+Profil (\begin{DoxyParamCaption}\item[{const string}]{susername }\end{DoxyParamCaption})}
+
+
+
+Fonction retourne \mbox{\hyperlink{class_profil}{Profil}} avec username demandé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \+: username du \mbox{\hyperlink{class_profil}{Profil}} à retourner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_ad01b3d1362171e6602f725b78eb80b2e}\label{class_ensemble_profils_ad01b3d1362171e6602f725b78eb80b2e}} 
+\index{EnsembleProfils@{EnsembleProfils}!matchAge@{matchAge}}
+\index{matchAge@{matchAge}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matchAge()}{matchAge()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::match\+Age (\begin{DoxyParamCaption}\item[{const int}]{min\+Age,  }\item[{const int}]{max\+Age,  }\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Matching par age. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Age} & \+: age minimale de matching \\
+\hline
+{\em max\+Age} & \+: age maximale de matching \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a37d9903316b12bf42e2d68d4948a9ede}\label{class_ensemble_profils_a37d9903316b12bf42e2d68d4948a9ede}} 
+\index{EnsembleProfils@{EnsembleProfils}!matching@{matching}}
+\index{matching@{matching}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matching()}{matching()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::matching (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_profil}{Profil}} \&}]{profil,  }\item[{const int}]{min\+Age,  }\item[{const int}]{max\+Age,  }\item[{const string}]{ville,  }\item[{const string}]{sexe }\end{DoxyParamCaption})}
+
+
+
+Recherche les profils correspondants aux critères choisis par l\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Sport} & \+: liste des sports de l\textquotesingle{}utilisateur \\
+\hline
+{\em min\+Age} & \+: age minimale de matching \\
+\hline
+{\em max\+Age} & \+: age maximale de matching \\
+\hline
+{\em ville} & \+: ville recherchée par l\textquotesingle{}utilisateur \\
+\hline
+{\em sexe} & \+: sexe recherché par l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_afc9e4bf075caf4d1528b9568d01aa7dd}\label{class_ensemble_profils_afc9e4bf075caf4d1528b9568d01aa7dd}} 
+\index{EnsembleProfils@{EnsembleProfils}!matchingASV@{matchingASV}}
+\index{matchingASV@{matchingASV}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matchingASV()}{matchingASV()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::matching\+ASV (\begin{DoxyParamCaption}\item[{const int}]{min\+Age,  }\item[{const int}]{max\+Age,  }\item[{const string}]{sexe,  }\item[{const string}]{ville,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Recherche les profils correspondants aux critères choisis par l\textquotesingle{}utilisateur sans prendre en compte les types de sport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Age} & \+: age minimale de matching \\
+\hline
+{\em max\+Age} & \+: age maximale de matching \\
+\hline
+{\em ville} & \+: ville recherchée par l\textquotesingle{}utilisateur \\
+\hline
+{\em sexe} & \+: sexe recherché par l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche \\
+\hline
+\end{DoxyParams}
+Vérification de tous les cas possibles\mbox{\Hypertarget{class_ensemble_profils_a1834ff803861eee1f7aad5df7d36e219}\label{class_ensemble_profils_a1834ff803861eee1f7aad5df7d36e219}} 
+\index{EnsembleProfils@{EnsembleProfils}!matchSexe@{matchSexe}}
+\index{matchSexe@{matchSexe}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matchSexe()}{matchSexe()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::match\+Sexe (\begin{DoxyParamCaption}\item[{const string}]{sexe,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Matching par sexe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sexe} & \+: sexe recherché par l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a046aaa766af3a37632c909d4bc88565e}\label{class_ensemble_profils_a046aaa766af3a37632c909d4bc88565e}} 
+\index{EnsembleProfils@{EnsembleProfils}!matchTypeSport@{matchTypeSport}}
+\index{matchTypeSport@{matchTypeSport}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matchTypeSport()}{matchTypeSport()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::match\+Type\+Sport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_profil}{Profil}} \&}]{profil }\end{DoxyParamCaption})}
+
+
+
+Matching par type de sport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & \+: liste de type de sport de l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a58fe665489b4b46eef79574719a74238}\label{class_ensemble_profils_a58fe665489b4b46eef79574719a74238}} 
+\index{EnsembleProfils@{EnsembleProfils}!matchVille@{matchVille}}
+\index{matchVille@{matchVille}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{matchVille()}{matchVille()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::match\+Ville (\begin{DoxyParamCaption}\item[{const string}]{ville,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Matching par ville. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ville} & \+: ville recherchée par l\textquotesingle{}utilisateur \\
+\hline
+{\em username} & \+: username de l\textquotesingle{}utilisateur faisant la recherche \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_ae47f467e7dc805646e610a75902b75fb}\label{class_ensemble_profils_ae47f467e7dc805646e610a75902b75fb}} 
+\index{EnsembleProfils@{EnsembleProfils}!operator=@{operator=}}
+\index{operator=@{operator=}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Ensemble\+Profils\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} \&}]{recopie }\end{DoxyParamCaption})}
+
+
+
+Operateur= permet de remplacer les données actuelles par les données d\textquotesingle{}un autre \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recopie} & \+: \mbox{\hyperlink{class_ensemble_profils}{Ensemble\+Profils}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_af53d5a6121fe90090fecaa58f2a0726c}\label{class_ensemble_profils_af53d5a6121fe90090fecaa58f2a0726c}} 
+\index{EnsembleProfils@{EnsembleProfils}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_profil}{Profil}} \& Ensemble\+Profils\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Operateur\mbox{[}\mbox{]} pour pouvoir faire par exemple profils\mbox{[}0\mbox{]}.get\+Username() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: index de la liste \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ensemble_profils_a945aac2a4c98cc8b4f4d7ef3935706ee}\label{class_ensemble_profils_a945aac2a4c98cc8b4f4d7ef3935706ee}} 
+\index{EnsembleProfils@{EnsembleProfils}!triEnleve@{triEnleve}}
+\index{triEnleve@{triEnleve}!EnsembleProfils@{EnsembleProfils}}
+\doxysubsubsection{\texorpdfstring{triEnleve()}{triEnleve()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ensemble\+Profils\+::tri\+Enleve (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{tabmatchs,  }\item[{const vector$<$ string $>$}]{tab }\end{DoxyParamCaption})}
+
+
+
+Enleve du tableau tabmatchs les valeurs qui ne sont pas présentes dans tab. 
+
+Enleve les usernames de tabmatchs qui ne sont pas dans la liste tab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tabmatchs} & \+: 1er tableau \\
+\hline
+{\em tab} & \+: 2ème tableau \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Ensemble\+Profils.\+h\item 
+src/core/Ensemble\+Profils.\+cpp\end{DoxyCompactItemize}
