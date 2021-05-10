@@ -1,6 +1,3 @@
-Lucas Brustolin 11805322
-Youri Novikov 12002123
-Nicolas Planche 11805532
 # Projet pour LIFAP4
 
 Notre projet est une application de rencontres sportives. L'application permet de trouver un partenaire qui pratique les mêmes sports que vous.
