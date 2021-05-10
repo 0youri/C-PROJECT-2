@@ -17,7 +17,7 @@ CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wall -Wextra -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wall -Wextra -fPIC $(DEFINES)
-INCPATH       = -I src/qt -I. -I/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtGui.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang -F/Users/youri/Qt/6.0.3/clang_64/lib
+INCPATH       = -Isrc/qt -I. -I/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtGui.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/AGL.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang -F/Users/youri/Qt/6.0.3/clang_64/lib
 QMAKE         = /Users/youri/Qt/6.0.3/clang_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = app1.0.0
-DISTDIR = /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/projet/obj/.tmp/app1.0.0
+DISTDIR = /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/L2-LIFAP4-PROJET/.tmp/app1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/Users/youri/Qt/6.0.3/clang_64/lib
 LIBS          = $(SUBLIBS) -F/Users/youri/Qt/6.0.3/clang_64/lib -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtCore -framework DiskArbitration -framework IOKit -framework AGL -framework OpenGL   
@@ -56,13 +56,13 @@ SOURCES       = src/qt/app.cpp \
 		src/core/Avis.cpp \
 		src/core/EnsembleProfils.cpp \
 		src/core/Profil.cpp \
-		src/qt/main.cpp src/qt/moc_app.cpp
-OBJECTS       = obj/app.o \
-		obj/Avis.o \
-		obj/EnsembleProfils.o \
-		obj/Profil.o \
-		obj/main.o \
-		obj/moc_app.o
+		src/qt/main.cpp moc_app.cpp
+OBJECTS       = app.o \
+		Avis.o \
+		EnsembleProfils.o \
+		Profil.o \
+		main.o \
+		moc_app.o
 DIST          = /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/device_config.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/common/unix.conf \
@@ -146,6 +146,7 @@ DIST          = /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_post.prf \
+		src/qt/.qmake.stash \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/toolchain.prf \
@@ -174,7 +175,7 @@ DIST          = /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/exceptions.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/yacc.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/lex.prf \
-		src/src/qt/app.pro src/qt/app.h \
+		src/qt/src/qt/app.pro src/qt/app.h \
 		src/core/Avis.h \
 		src/core/EnsembleProfils.h \
 		src/core/Profil.h src/qt/app.cpp \
@@ -184,25 +185,25 @@ DIST          = /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_pre.prf \
 		src/qt/main.cpp
 QMAKE_TARGET  = app
 DESTDIR       = 
-TARGET        = bin/app.app/Contents/MacOS/app
+TARGET        = app.app/Contents/MacOS/app
 
 ####### Custom Variables
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/L2-LIFAP4-PROJET/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT__PRO_FILE_ = /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/projet/src/qt/app.pro
+EXPORT__PRO_FILE_ = /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/L2-LIFAP4-PROJET/src/qt/app.pro
 
 
 include /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/mac/sdk.mk
 first: all
 ####### Build rules
 
-bin/app.app/Contents/MacOS/app: src/qt/ui_app.h $(OBJECTS)  
-	@test -d bin/app.app/Contents/MacOS/ || mkdir -p bin/app.app/Contents/MacOS/
+app.app/Contents/MacOS/app: ui_app.h $(OBJECTS)  
+	@test -d app.app/Contents/MacOS/ || mkdir -p app.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: src/qt/app.pro /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake.conf /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_pre.prf \
@@ -288,6 +289,7 @@ Makefile: src/qt/app.pro /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/qt_config.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/youri/Qt/6.0.3/clang_64/mkspecs/features/toolchain.prf \
@@ -404,6 +406,7 @@ Makefile: src/qt/app.pro /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/qt_config.prf:
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/toolchain.prf:
@@ -441,23 +444,23 @@ qmake: FORCE
 
 qmake_all: FORCE
 
-bin/app.app/Contents/PkgInfo: 
-	@test -d bin/app.app/Contents || mkdir -p bin/app.app/Contents
-	@$(DEL_FILE) bin/app.app/Contents/PkgInfo
-	@echo "APPL????" > bin/app.app/Contents/PkgInfo
-bin/app.app/Contents/Resources/empty.lproj: 
-	@test -d bin/app.app/Contents/Resources || mkdir -p bin/app.app/Contents/Resources
-	@touch bin/app.app/Contents/Resources/empty.lproj
+app.app/Contents/PkgInfo: 
+	@test -d app.app/Contents || mkdir -p app.app/Contents
+	@$(DEL_FILE) app.app/Contents/PkgInfo
+	@echo "APPL????" > app.app/Contents/PkgInfo
+app.app/Contents/Resources/empty.lproj: 
+	@test -d app.app/Contents/Resources || mkdir -p app.app/Contents/Resources
+	@touch app.app/Contents/Resources/empty.lproj
 	
-bin/app.app/Contents/Info.plist: 
-	@test -d bin/app.app/Contents || mkdir -p bin/app.app/Contents
-	@$(DEL_FILE) bin/app.app/Contents/Info.plist
-	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,com.youri.app,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},com.youri.app,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},,g" -e "s,@EXECUTABLE@,app,g" -e "s,@LIBRARY@,app,g" -e "s,\$${EXECUTABLE_NAME},app,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/Info.plist.app >bin/app.app/Contents/Info.plist
+app.app/Contents/Info.plist: 
+	@test -d app.app/Contents || mkdir -p app.app/Contents
+	@$(DEL_FILE) app.app/Contents/Info.plist
+	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,com.youri.app,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},com.youri.app,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},,g" -e "s,@EXECUTABLE@,app,g" -e "s,@LIBRARY@,app,g" -e "s,\$${EXECUTABLE_NAME},app,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" /Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang/Info.plist.app >app.app/Contents/Info.plist
 
 all: Makefile \
-		bin/app.app/Contents/PkgInfo \
-		bin/app.app/Contents/Resources/empty.lproj \
-		bin/app.app/Contents/Info.plist bin/app.app/Contents/MacOS/app
+		app.app/Contents/PkgInfo \
+		app.app/Contents/Resources/empty.lproj \
+		app.app/Contents/Info.plist app.app/Contents/MacOS/app
 
 dist: distdir FORCE
 	(cd `dirname $(DISTDIR)` && $(TAR) $(DISTNAME).tar $(DISTNAME) && $(COMPRESS) $(DISTNAME).tar) && $(MOVE) `dirname $(DISTDIR)`/$(DISTNAME).tar.gz . && $(DEL_FILE) -r $(DISTDIR)
@@ -477,7 +480,8 @@ clean: compiler_clean
 
 
 distclean: clean 
-	-$(DEL_FILE) -r bin/app.app
+	-$(DEL_FILE) -r app.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -496,35 +500,35 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_predefs_make_all: src/qt/moc_predefs.h
+compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
-	-$(DEL_FILE) src/qt/moc_predefs.h
-src/qt/moc_predefs.h: /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/data/dummy.cpp
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wall -Wextra -dM -E -o src/qt/moc_predefs.h /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/data/dummy.cpp
+	-$(DEL_FILE) moc_predefs.h
+moc_predefs.h: /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/data/dummy.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.14 -Wall -Wextra -dM -E -o moc_predefs.h /Users/youri/Qt/6.0.3/clang_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: src/qt/moc_app.cpp
+compiler_moc_header_make_all: moc_app.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) src/qt/moc_app.cpp
-src/qt/moc_app.cpp: src/qt/app.h \
+	-$(DEL_FILE) moc_app.cpp
+moc_app.cpp: src/qt/app.h \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		src/core/EnsembleProfils.h \
 		src/core/Profil.h \
 		src/core/Avis.h \
-		src/qt/moc_predefs.h \
+		moc_predefs.h \
 		/Users/youri/Qt/6.0.3/clang_64/bin/moc
-	/Users/youri/Qt/6.0.3/clang_64/bin/moc $(DEFINES) --include /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/projet/obj/src/qt/moc_predefs.h -I/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang -I/Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/projet/src/qt -I/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtGui.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/youri/Qt/6.0.3/clang_64/lib src/qt/app.h -o src/qt/moc_app.cpp
+	/Users/youri/Qt/6.0.3/clang_64/bin/moc $(DEFINES) --include /Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/L2-LIFAP4-PROJET/moc_predefs.h -I/Users/youri/Qt/6.0.3/clang_64/mkspecs/macx-clang -I/Users/youri/Desktop/LICENCE/S4/LIFAP4-C++/L2-LIFAP4-PROJET/src/qt -I/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtGui.framework/Headers -I/Users/youri/Qt/6.0.3/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/youri/Qt/6.0.3/clang_64/lib src/qt/app.h -o moc_app.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: src/qt/ui_app.h
+compiler_uic_make_all: ui_app.h
 compiler_uic_clean:
-	-$(DEL_FILE) src/qt/ui_app.h
-src/qt/ui_app.h: src/qt/app.ui \
+	-$(DEL_FILE) ui_app.h
+ui_app.h: src/qt/app.ui \
 		/Users/youri/Qt/6.0.3/clang_64/bin/uic
-	/Users/youri/Qt/6.0.3/clang_64/bin/uic src/qt/app.ui -o src/qt/ui_app.h
+	/Users/youri/Qt/6.0.3/clang_64/bin/uic src/qt/app.ui -o ui_app.h
 
 compiler_rez_source_make_all:
 compiler_rez_source_clean:
@@ -538,28 +542,28 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-obj/app.o: src/qt/app.cpp src/qt/app.h \
+app.o: src/qt/app.cpp src/qt/app.h \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		src/core/EnsembleProfils.h \
 		src/core/Profil.h \
 		src/core/Avis.h \
-		src/qt/ui_app.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/app.o src/qt/app.cpp
+		ui_app.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o app.o src/qt/app.cpp
 
-obj/Avis.o: src/core/Avis.cpp src/core/Avis.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Avis.o src/core/Avis.cpp
+Avis.o: src/core/Avis.cpp src/core/Avis.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Avis.o src/core/Avis.cpp
 
-obj/EnsembleProfils.o: src/core/EnsembleProfils.cpp src/core/EnsembleProfils.h \
+EnsembleProfils.o: src/core/EnsembleProfils.cpp src/core/EnsembleProfils.h \
 		src/core/Profil.h \
 		src/core/Avis.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/EnsembleProfils.o src/core/EnsembleProfils.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o EnsembleProfils.o src/core/EnsembleProfils.cpp
 
-obj/Profil.o: src/core/Profil.cpp src/core/Profil.h \
+Profil.o: src/core/Profil.cpp src/core/Profil.h \
 		src/core/Avis.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Profil.o src/core/Profil.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Profil.o src/core/Profil.cpp
 
-obj/main.o: src/qt/main.cpp src/qt/app.h \
+main.o: src/qt/main.cpp src/qt/app.h \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		src/core/EnsembleProfils.h \
@@ -567,10 +571,10 @@ obj/main.o: src/qt/main.cpp src/qt/app.h \
 		src/core/Avis.h \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		/Users/youri/Qt/6.0.3/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/main.o src/qt/main.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o src/qt/main.cpp
 
-obj/moc_app.o: src/qt/moc_app.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/moc_app.o src/qt/moc_app.cpp
+moc_app.o: moc_app.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_app.o moc_app.cpp
 
 ####### Install
 
@@ -578,7 +582,7 @@ install_target: first FORCE
 	@test -d $(INSTALL_ROOT)/opt/app/bin || mkdir -p $(INSTALL_ROOT)/opt/app/bin
 	$(DEL_FILE) -r $(INSTALL_ROOT)/opt/app/bin/app.app
 	
-	$(QINSTALL) bin/app.app $(INSTALL_ROOT)/opt/app/bin/app.app
+	$(QINSTALL) app.app $(INSTALL_ROOT)/opt/app/bin/app.app
 
 uninstall_target: FORCE
 	-$(DEL_FILE) -r $(INSTALL_ROOT)/opt/app/bin/app.app
